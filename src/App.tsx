@@ -72,13 +72,8 @@ const App: FC = () => {
       alert("Formani to'ldiring!");
     }
   }
-  const capitalizeWords = (str: string) => {
-    return str
-      .split(' ')
-      .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-      .join(' ');
-  };
-  function handleDelete(id: string) {
+
+  function handleDelete(id: number) {
     const updatedUsers = users.filter((user) => user.id !== id);
     setUsers(updatedUsers);
   }
